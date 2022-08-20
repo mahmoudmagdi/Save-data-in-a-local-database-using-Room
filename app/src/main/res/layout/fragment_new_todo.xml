@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.khlafawi.todoroom.helpers.Converter" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="todoItem"
+            type="com.khlafawi.todoroom.model.ToDoItem" />
+
+        <variable
+            name="oldItem"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.NewTodoFragment">
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/write_down_your_todo_item_title_and_priority_n_priority_is_for_sorting_your_todo_items_as_per_importance"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/todo_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints="false"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top"
+            android:hint="@string/what_you_want_to_do"
+            android:inputType="text"
+            android:lines="3"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:text="@={todoItem.title}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+        <EditText
+            android:id="@+id/priority"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints="false"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/priority"
+            android:inputType="numberDecimal"
+            android:lines="3"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:text="@={Converter.intToString(todoItem.priority)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/todo_title" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priority" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:text="@string/delete"
+            android:visibility="@{oldItem ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_save" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

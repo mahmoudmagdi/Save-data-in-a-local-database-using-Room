@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListFragment">
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.khlafawi.todoroom.ui.TodoListFragment"
+        android:label="@string/todo_list_fragment_label"
+        tools:layout="@layout/fragment_todo_list">
+
+        <action
+            android:id="@+id/action_listItems_to_AddNewItem"
+            app:destination="@id/NewItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewItemFragment"
+        android:name="com.khlafawi.todoroom.ui.NewTodoFragment"
+        android:label="@string/new_todo_fragment_label"
+        tools:layout="@layout/fragment_new_todo">
+
+        <argument
+            android:name="selectedTodoItem"
+            app:argType="com.khlafawi.todoroom.model.ToDoItem"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_addNewItem_to_listItems"
+            app:destination="@id/ListFragment" />
+    </fragment>
+</navigation>

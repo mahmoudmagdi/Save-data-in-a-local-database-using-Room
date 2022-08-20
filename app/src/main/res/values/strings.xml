@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ToDo Room</string>
+    <string name="action_settings">Clear list</string>
+    <string name="save">Save</string>
+    <string name="new_todo_item_fab_button" translatable="false">new todo item fab button</string>
+    <string name="priorityFormat" translatable="false">%s</string>
+    <string name="what_you_want_to_do">What do you want to do?</string>
+    <string name="priority">Priority</string>
+    <string name="write_down_your_todo_item_title_and_priority_n_priority_is_for_sorting_your_todo_items_as_per_importance">Write down your ToDo item title and priority. \n Priority is for sorting your todo items as per importance.</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="todo_list_fragment_label" translatable="false">Todo list fragment</string>
+    <string name="new_todo_fragment_label" translatable="false">New todo item fragment</string>
+    <string name="valid_title">Make sure to enter a valid title</string>
+    <string name="valid_priority">make sure to enter a valid priority</string>
+    <string name="added_successfully">ToDo item added successfully</string>
+    <string name="updated_successfully">ToDo item updated successfully</string>
+    <string name="deleted_successfully">ToDo item deleted successfully</string>
+    <string name="delete">Delete</string>
+</resources>

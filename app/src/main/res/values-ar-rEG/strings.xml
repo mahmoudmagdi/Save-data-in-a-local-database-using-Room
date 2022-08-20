@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToDo Room</string>
+    <string name="action_settings">مسح القائمة</string>
+    <string name="save">حفظ</string>
+    <string name="what_you_want_to_do">ماذا تريد أن تفعل؟</string>
+    <string name="priority">الأولوية</string>
+    <string name="write_down_your_todo_item_title_and_priority_n_priority_is_for_sorting_your_todo_items_as_per_importance">اكتب المهمة والأولوية.الأولوية لفرز المهام حسب الأهمية.</string>
+    <string name="valid_title">تأكد من ادخال عنوان صحيح</string>
+    <string name="valid_priority">تأكد من ادخال اولوية صحيحة</string>
+    <string name="added_successfully">تم اضافة المهمة بنجاح</string>
+    <string name="updated_successfully">تم تحديث المهمة بنجاح</string>
+    <string name="deleted_successfully">تم مسح المهمة بنجاح</string>
+    <string name="delete">مسح</string>
+</resources>
